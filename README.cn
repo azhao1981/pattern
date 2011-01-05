@@ -1,0 +1,26 @@
+== EasyPattern
+这是一个用于自动生成设计模式/数据结构的rubygem工具，其特点是支持自定义模板，这使您学习设计模式和数据结构更加方便。
+
+== Useage
+简单模式
+pattern [tempate_dir] [main_class_name] [-d target_dir]
+pattern [-t tempate_dir] [-d target_dir("." is default)] [-c classes_name] [-op operations_name]
+复杂模式 (未支持)
+pattern -f pattern_file
+
+== 命令示例:
+简单模式:
+* pattern ruby.composite Task -d target
+* pattern -t ruby.composite -d target -c Task;compositeTask;AddDryIngredientsTask,MixTask;MakeBatterTask -op execute 
+复杂模式(pattern_file):
+
+== 未来工作
+1. 支持复杂模式
+2. 通过网站支持模板分享
+
+== Author
+Copyright @ weizhao 2010 
+mailto: azhao.1981@gmail.com
+
+== licese
+This library and all associated materials are releassse under the terms of version 2 of the GNU Public License(http://www.gnu.org/copyleft/gpl.html).

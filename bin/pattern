@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+current_dir = File.dirname(__FILE__)
+
+require current_dir + '/../lib/version'
+if %w(--version -v).include? ARGV.first
+  puts "pattern #{Pattern::VERSION::STRING}"
+  exit(0)
+end
+require current_dir + '/../lib/compositecode'
+pattern = CompositeCode.new(Command.new(ARGV))
+pattern.execute

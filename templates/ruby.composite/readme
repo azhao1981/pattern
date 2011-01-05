@@ -1,0 +1,5 @@
+template "component.rb","class_name"
+template "composite.rb","composite_name"
+template "leaf.rb","leaf_name"
+template "compositeobject.rb","composite_object_name"
+default @base_name,"Composite#{@base_name}","Leaf#{@base_name}","CompositeObject#{@base_name}"
