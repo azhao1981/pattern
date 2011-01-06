@@ -1,12 +1,32 @@
 #!/usr/bin/env ruby
-
 current_dir = File.dirname(__FILE__)
 
-require current_dir + '/../lib/version'
 if %w(--version -v).include? ARGV.first
+  require current_dir + '/../lib/version'
   puts "pattern #{Pattern::VERSION::STRING}"
   exit(0)
 end
+
+if %w(--set -s).include? ARGV.first
+  require current_dir + '/../lib/configuration'
+  configuration = Configuration.new
+  configuration.execute(ARGV)
+  exit(0)
+end
+
+if %w(--list -l).include? ARGV.first
+  require current_dir + '/../lib/configuration'
+  configuration = Configuration.new
+  configuration.list
+  exit(0)
+end
+
+if %w(--help -h).include? ARGV.first
+  require current_dir + '/../lib/version'
+  puts Pattern::HELP::STRING
+  exit(0)
+end
+
 require current_dir + '/../lib/compositecode'
 pattern = CompositeCode.new(Command.new(ARGV))
 pattern.execute
