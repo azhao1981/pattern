@@ -16,11 +16,22 @@ complex model (not support now.)
 
 simple model:
 * pattern ruby.composite Task -d target
-* pattern -t ruby.composite -d target -c Task;compositeTask;AddDryIngredientsTask,MixTask;MakeBatterTask -op execute 
+* pattern -t ruby.composite -d target -c Task;CompositeTask;AddDryIngredientsTask,MixTask,AddLiquidsTask;MakeBatterTask,MakeCakeTask -op get_time_required
 complex model(pattern_file):
 
 == Future
 Sharing pattern templates on website.
+
+== Version
+0.9.4 
+1. Refactoring the code							
+2. Template of ruby.composite work
+3. Getting help with no parameter          			
+4. Replacing lower_case name . Example: class_name:Task lc_class_name:task						
+
+
+== Question 
+If you get some Questions. Mailto :azhao.1981@gmail.com
 
 == Author
 

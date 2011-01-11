@@ -39,6 +39,7 @@ class CompositeCode < Code
   	  template_classes.each do |class_name|
   	  	replace_values = default_replace_values.clone
   	  	replace_values["#{key}"] = class_name
+  	  	replace_values["lc_#{key}"] = class_name.downcase
   	  	replace_values["operations"] = ""
   	    operations.each do |operation|
   	  	  replace_values["operations"] << operations_template.gsub("#operation#",operation) unless operation == " "
@@ -57,6 +58,7 @@ class CompositeCode < Code
   	default_replace_values = Hash.new
   	@template_replace_keys.each do |key|
   	  default_replace_values["#{key}"] = @classes[x+=1][0]
+  	  default_replace_values["lc_#{key}"] = @classes[x][0].downcase
   	end
   	return default_replace_values
   end

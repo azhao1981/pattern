@@ -16,6 +16,9 @@ describe CompositeCode do
   	code.replace_values.should == {"class_name"=>"Task","composite_name"=>"CompositeTask",
   									"leaf_name"=>"AddDryIngredientsTask",
   	                                "composite_object_name"=>"MakeBatterTask",
+  	                                "lc_class_name"=>"task","lc_composite_name"=>"compositetask",
+  									"lc_leaf_name"=>"adddryingredientstask",
+  	                                "lc_composite_object_name"=>"makebattertask",
   	                                "operations"=>"  def execute\n  \t\n  end\n  def test\n  \t\n  end\n"
                                    }
     code = @compositecode.codes[1]
@@ -24,6 +27,9 @@ describe CompositeCode do
   	code.replace_values.should == {"class_name"=>"Task","composite_name"=>"CompositeTask",
   									"leaf_name"=>"AddDryIngredientsTask",
   	                                "composite_object_name"=>"MakeBatterTask",
+  	                                "lc_class_name"=>"task","lc_composite_name"=>"compositetask",
+  									"lc_leaf_name"=>"adddryingredientstask",
+  	                                "lc_composite_object_name"=>"makebattertask",
   	                                "operations"=>"  def execute\n  \t\n  end\n  def test\n  \t\n  end\n"
                                    }
     code = @compositecode.codes[2]
@@ -32,6 +38,9 @@ describe CompositeCode do
   	code.replace_values.should == {"class_name"=>"Task","composite_name"=>"CompositeTask",
   									"leaf_name"=>"AddDryIngredientsTask",
   	                                "composite_object_name"=>"MakeBatterTask",
+  	                                "lc_class_name"=>"task","lc_composite_name"=>"compositetask",
+  									"lc_leaf_name"=>"adddryingredientstask",
+  	                                "lc_composite_object_name"=>"makebattertask",
   	                                "operations"=>"  def execute\n  \t\n  end\n  def test\n  \t\n  end\n"
                                    }
     code = @compositecode.codes[3]
@@ -40,6 +49,9 @@ describe CompositeCode do
   	code.replace_values.should == {"class_name"=>"Task","composite_name"=>"CompositeTask",
   									"leaf_name"=>"MixTask",
   	                                "composite_object_name"=>"MakeBatterTask",
+  	                                "lc_class_name"=>"task","lc_composite_name"=>"compositetask",
+  									"lc_leaf_name"=>"mixtask",
+  	                                "lc_composite_object_name"=>"makebattertask",
   	                                "operations"=>"  def execute\n  \t\n  end\n  def test\n  \t\n  end\n"
                                    }
     code = @compositecode.codes[4]
@@ -48,6 +60,9 @@ describe CompositeCode do
   	code.replace_values.should == {"class_name"=>"Task","composite_name"=>"CompositeTask",
   									"leaf_name"=>"AddDryIngredientsTask",
   	                                "composite_object_name"=>"MakeBatterTask",
+  	                                "lc_class_name"=>"task","lc_composite_name"=>"compositetask",
+  									"lc_leaf_name"=>"adddryingredientstask",
+  	                                "lc_composite_object_name"=>"makebattertask",
   	                                "operations"=>"  def execute\n  \t\n  end\n  def test\n  \t\n  end\n"
                                    }            
   end
@@ -62,6 +77,9 @@ describe CompositeCode do
   	code.replace_values.should == {"class_name"=>"Task","composite_name"=>"CompositeTask",
   									"leaf_name"=>"LeafTask",
   	                                "composite_object_name"=>"CompositeObjectTask",
+  	                                "lc_class_name"=>"task","lc_composite_name"=>"compositetask",
+  									"lc_leaf_name"=>"leaftask",
+  	                                "lc_composite_object_name"=>"compositeobjecttask",
   	                                "operations"=>""
                                    }
     code = @compositecode.codes[1]
@@ -70,6 +88,9 @@ describe CompositeCode do
   	code.replace_values.should == {"class_name"=>"Task","composite_name"=>"CompositeTask",
   									"leaf_name"=>"LeafTask",
   	                                "composite_object_name"=>"CompositeObjectTask",
+  	                                "lc_class_name"=>"task","lc_composite_name"=>"compositetask",
+  									"lc_leaf_name"=>"leaftask",
+  	                                "lc_composite_object_name"=>"compositeobjecttask",
   	                                "operations"=>""
                                    }
     code = @compositecode.codes[2]
@@ -78,6 +99,9 @@ describe CompositeCode do
   	code.replace_values.should == {"class_name"=>"Task","composite_name"=>"CompositeTask",
   									"leaf_name"=>"LeafTask",
   	                                "composite_object_name"=>"CompositeObjectTask",
+  	                                "lc_class_name"=>"task","lc_composite_name"=>"compositetask",
+  									"lc_leaf_name"=>"leaftask",
+  	                                "lc_composite_object_name"=>"compositeobjecttask",
   	                                "operations"=>""
                                    }
     code = @compositecode.codes[3]
@@ -86,6 +110,9 @@ describe CompositeCode do
   	code.replace_values.should == {"class_name"=>"Task","composite_name"=>"CompositeTask",
   									"leaf_name"=>"LeafTask",
   	                                "composite_object_name"=>"CompositeObjectTask",
+  	                                "lc_class_name"=>"task","lc_composite_name"=>"compositetask",
+  									"lc_leaf_name"=>"leaftask",
+  	                                "lc_composite_object_name"=>"compositeobjecttask",
   	                                "operations"=>""
                                    }        
   end

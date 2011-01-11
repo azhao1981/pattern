@@ -4,7 +4,7 @@ Gem::Specification.new do |spec|
 #  Package information
 #-----------------------------
 	spec.name = 'pattern'
-	spec.version = '0.9.3'
+	spec.version = '0.9.4'
 	spec.executables << 'pattern'
 	spec.has_rdoc = true
 	spec.rdoc_options << '--title' << 'Pattern' <<

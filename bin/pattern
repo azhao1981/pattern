@@ -1,28 +1,27 @@
 #!/usr/bin/env ruby
 current_dir = File.dirname(__FILE__)
 
-if %w(--version -v).include? ARGV.first
-  require current_dir + '/../lib/version'
+require current_dir + '/../lib/version'
+puts "#{Pattern::HELP::WELLCOME}"
+if %w(--version -v).include? ARGV.first  
   puts "pattern #{Pattern::VERSION::STRING}"
   exit(0)
 end
+require current_dir + '/../lib/configuration'
 
 if %w(--set -s).include? ARGV.first
-  require current_dir + '/../lib/configuration'
   configuration = Configuration.new
   configuration.execute(ARGV)
   exit(0)
 end
 
 if %w(--list -l).include? ARGV.first
-  require current_dir + '/../lib/configuration'
   configuration = Configuration.new
   configuration.list
   exit(0)
 end
 
-if %w(--help -h).include? ARGV.first
-  require current_dir + '/../lib/version'
+if (ARGV.empty? || (%w(--help -h).include? ARGV.first))
   puts Pattern::HELP::STRING
   exit(0)
 end

@@ -1,3 +1,11 @@
+
+2011-01-10
+1. refactoring the code							OK
+2. Adding 2or3 template of ruby pattern code.	
+3. when no parameter,get help          			OK
+4. lower_case replace 							OK
+before
+
 1. 制作为rubygem
    1.1. 添加可执行文件       	OK
    1.2. 添加环境路径         	OK
@@ -14,4 +22,4 @@
 8. 列出可用的template				OK
 9. help功能               		Ok
 
-发现一个问题，如果我的问题不能按我的想法来排列，我先做下面的，再做上面的，我会很不舒服 
+
