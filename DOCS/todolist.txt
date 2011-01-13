@@ -1,9 +1,11 @@
-
+2012-01-13
+1. adding  template pattern code
+	pattern -t ruby.template -c Report;HTMLReport,PlainTextReport -d target -op output_report,output_body,output_start,output_head,output_body_start,output_line,output_body_end,output_end;output_start,output_head,output_body_start,output_line,output_body_end,output_end
 2011-01-10
 1. refactoring the code							OK
-2. Adding 2or3 template of ruby pattern code.	
+2. Adding 2or3 template of ruby pattern code.	just1
 3. when no parameter,get help          			OK
-4. lower_case replace 							OK
+4. lower_case replace 							OK 
 before
 
 1. 制作为rubygem

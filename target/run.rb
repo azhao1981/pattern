@@ -1,10 +1,12 @@
-#require "task"
-#require "compositetask"
-#require "adddryingredientstask"
-#require "mixtask"
-#require "addliquidstask"
-#require "makebattertask"
-require "makecaketask"
+#require "makecaketask"
 
-makecake = MakeCakeTask.new
-puts makecake.get_time_required
+#makecake = MakeCakeTask.new
+#puts makecake.get_time_required
+
+
+require "htmlreport"
+require "plaintextreport"
+
+HTMLReport.new.output_report
+puts "--------------------"
+PlainTextReport.new.output_report

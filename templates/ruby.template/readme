@@ -1,0 +1,3 @@
+default @base_name,"#{@base_name}Concrete"
+template "abstractclass.rb","class_name"
+template "concreteclass.rb","concrete_name"
