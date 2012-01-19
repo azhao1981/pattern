@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 	                       '--line-numbers'
 	spec.rubyforge_project = 'pattern'
 	spec.homepage = 'https://github.com/azhao1981/pattern'
-	spec.files = FileList['lib/*.rb', 'bin/*', '[A-Z]*', 'test/*','templates/**/*','etc/*','DOCS/*'].to_a
+	spec.files = FileList['lib/*.rb', 'bin/*', '[A-Z]*', 'test/*','templates/**/*','etc/*','docs/*'].to_a
 	spec.test_files = Dir.glob('test/*_spec.rb')
 	spec.summary = 'auto code tools.'
 	spec.description = <<-EOF
