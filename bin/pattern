@@ -1,31 +1,47 @@
 #!/usr/bin/env ruby
-current_dir = File.dirname(__FILE__)
+# encoding: utf-8
 
-require current_dir + '/../lib/version'
+#for require file relative.in ruby 1.9.3 use require_relative
+def require_r(path) require(File.expand_path(path.to_s, File.dirname(__FILE__))) end
+
+require 'optparse'
+require_r '../lib/version'
+require_r '../lib/configuration'
+
 puts "#{Pattern::HELP::WELLCOME}"
-if %w(--version -v).include? ARGV.first  
-  puts "pattern #{Pattern::VERSION::STRING}"
-  exit(0)
-end
-require current_dir + '/../lib/configuration'
 
-if %w(--set -s).include? ARGV.first
-  configuration = Configuration.new
-  configuration.execute(ARGV)
-  exit(0)
-end
+options = {}
+option_parser = OptionParser.new do |opts|
+  opts.banner = "Usage:"
+  
+  opts.on('-v','--version','Show Version') do
+    puts "pattern #{Pattern::VERSION::STRING}"
+    exit(0)
+  end
+  
+  opts.on('-s','--set','Set template dir' ) do
+    configuration = Configuration.new
+    configuration.execute(ARGV)
+    exit(0)
+  end
+  
+  opts.on('-l','--list','list template dirs') do
+    configuration = Configuration.new
+    configuration.list
+    exit(0)
+  end
+  
+  opts.on('-f','--file','Specify pattern file') do |file|
+    
+  end
 
-if %w(--list -l).include? ARGV.first
-  configuration = Configuration.new
-  configuration.list
-  exit(0)
-end
+end.parse!
 
 if (ARGV.empty? || (%w(--help -h).include? ARGV.first))
   puts Pattern::HELP::STRING
   exit(0)
 end
 
-require current_dir + '/../lib/compositecode'
+require_r '../lib/compositecode'
 pattern = CompositeCode.new(Command.new(ARGV))
 pattern.execute

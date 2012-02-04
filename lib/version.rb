@@ -2,7 +2,7 @@ module Pattern
   module VERSION #:nodoc:
     MAJOR = 0
     MINOR = 9
-    TINY  = 4
+    TINY  = 6
 
     STRING = [MAJOR, MINOR, TINY].join('.')
   end
@@ -26,7 +26,7 @@ module Pattern
   	  	https://github.com/azhao1981/pattern	  	
   	EOF
   	WELLCOME = <<-EOF
-  	Thanks for using pattern beta.You get idea or Question.Mailto:azhao.1981@gmail.com
+Thanks for using pattern beta.Q&Ideas Mailto:azhao.1981@gmail.com
   	EOF
   end
 end

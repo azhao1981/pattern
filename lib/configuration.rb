@@ -29,8 +29,8 @@ class Configuration
   	puts list-[".",".."]
   end
   def execute(argv)
-  	parameters = argv[2..100] || [Dir.pwd]   	
-  	action = argv[1]
+  	parameters = argv[1..100] || [Dir.pwd]   	
+  	action = argv[0]
   	add_path(parameters) if action=="add"
   	remove_path(parameters) if action == "remove"
   	get_default if action == "default"

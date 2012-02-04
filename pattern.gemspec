@@ -1,10 +1,12 @@
 require 'rake'
+require(File.expand_path('lib/version', File.dirname(__FILE__))) 
+
 Gem::Specification.new do |spec|
 #-----------------------------
 #  Package information
 #-----------------------------
 	spec.name = 'pattern'
-	spec.version = '0.9.4'
+	spec.version = Pattern::VERSION::STRING
 	spec.executables << 'pattern'
 	spec.has_rdoc = true
 	spec.rdoc_options << '--title' << 'Pattern' <<
