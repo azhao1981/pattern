@@ -18,4 +18,8 @@ module PathCommon
   def join(path,file=".")
   	File.join(path,file)
   end
+  # require file from project dir
+  def require_p(path)
+    require join(PROJECT_DIR,path)
+  end
 end
