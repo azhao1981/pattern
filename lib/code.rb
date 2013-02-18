@@ -16,6 +16,9 @@ class Code
   	end
   	return template_string
   end
+
+
+  # add for test
   
   def generate_code
   	if File.exist?(@target_file_name)
